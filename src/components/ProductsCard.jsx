@@ -5,7 +5,7 @@ function ProductsCard({ product }) {
     return (
         <>
             <div className='shadow-lg rounded p-3'>
-                <div className='flex items-center md:flex-col gap-3 '>
+                <div className='flex items-center gap-3 '>
 
                     <img src={product.image} alt='pc' className='h-12' />
 

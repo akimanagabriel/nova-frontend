@@ -5,7 +5,7 @@ function InfoBar({ updates }) {
         <>
             {
                 updates.map(info => (
-                    <div className='my-3'>
+                    <div key={info.id} className='my-3'>
                         <h1 className='text-sky-800 text-2xl font-bold'>{info.title}</h1>
                         <p>{info.content}</p>
                     </div>
