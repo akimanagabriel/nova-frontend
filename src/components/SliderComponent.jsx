@@ -21,7 +21,7 @@ function SliderComponent({ images }) {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="w-[500px] md:w-[650px]"
+                className="w-[400px] md:w-[650px]"
             >
 
 
@@ -32,8 +32,8 @@ function SliderComponent({ images }) {
                             <SwiperSlide>
                                 <div className='flex flex-col md:flex-row space-x-3 items-center'>
                                     <img src={image.name} alt="" className='h-[200px]' />
-                                    <div>
-                                        <h1 className='text-4xl text-slate-800 font-bold'>{image.title}</h1>
+                                    <div className='pb-10'>
+                                        <h1 className='text-xl md:text-2xl text-slate-800 font-bold'>{image.title}</h1>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio saepe fugit repellat officia corrupti eligendi aspernatur, deserunt nulla iusto </p>
                                     </div>
                                 </div>

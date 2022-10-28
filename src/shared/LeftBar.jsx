@@ -29,7 +29,7 @@ function LeftBar() {
     }
 
     return (
-        <div className='w-full md:w-5/12'>
+        <div className='w-full md:w-5/12 hidden lg:block'>
             <div className=' p-3'>
                 <h1 className='md:text-2xl font-bold text-sky-900'>Available Goods</h1>
                 {/* list of items */}

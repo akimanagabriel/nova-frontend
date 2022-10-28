@@ -46,7 +46,7 @@ function Home() {
 
   return (
     <div>
-      <div className=''>
+      <div className='py-3 px-0 overflow-hidden '>
         <SliderComponent images={images} />
       </div>
 
