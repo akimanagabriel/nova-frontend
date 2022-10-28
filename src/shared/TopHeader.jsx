@@ -17,7 +17,7 @@ function TopHeader() {
             </div>
 
             {/* Main header */}
-            <div className='flex justify-between items-center bg-sky-700 px-5 py-2 sticky top-0 z-40'>
+            <div className='flex justify-between items-center bg-sky-700 px-5 py-2 sticky top-0 z-40 shadow'>
                 <div className='text-2xl font-bold text-sky-50'>
                     <Link to={'/'}>NOVA</Link>
                 </div>

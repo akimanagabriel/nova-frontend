@@ -9,7 +9,7 @@ function RightBar() {
       <ul className='space-y-2'>
         {
           services.map((service) => (
-            <li>
+            <li key={service.id}>
               <NavLink to={service.url} className='hover:underline'> {service.title} </NavLink>
             </li>
           ))
