@@ -4,7 +4,7 @@ import { menuList } from './topMenu'
 
 function TopHeader() {
 
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(true)
 
     const handleMenus = () => {
         setVisible(!visible)
@@ -21,7 +21,7 @@ function TopHeader() {
 
                     </div>
                     <div className='hidden sm:block'>
-                        <button className='bg-sky-800 px-6 py-2 rounded-full text-white '>Get Started</button>
+                    <Link className='bg-sky-800 px-6 py-2 rounded-full text-white' to={'/get-started'}>Get Started</Link>
                     </div>
             </div>
 
@@ -41,7 +41,7 @@ function TopHeader() {
 
                 <div>
                     {visible &&
-                        <ul className="flex flex-col md:flex-row  md:space-x-5 space-y-2 py-2 text-sky-100">
+                        <ul className="flex flex-col md:items-end md:flex-row  md:space-x-5 space-y-2 py-2 text-sky-100">
                             {menuList.map((menu) => {
                                 return (<li key={menu.id.toString()}><NavLink className={'hover:font-bold hover:underline'} to={menu.url}>{menu.name}</NavLink></li>)
                             })}
