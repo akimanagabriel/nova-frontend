@@ -41,10 +41,11 @@ function TopHeader() {
 
                 <div>
                     {visible &&
-                        <ul className="flex flex-col md:flex-row  md:space-x-5 py-2 text-sky-100">
+                        <ul className="flex flex-col md:flex-row  md:space-x-5 space-y-2 py-2 text-sky-100">
                             {menuList.map((menu) => {
                                 return (<li key={menu.id.toString()}><NavLink className={'hover:font-bold hover:underline'} to={menu.url}>{menu.name}</NavLink></li>)
                             })}
+                            <li className='md:hidden flex'><NavLink className={'border px-4 py-2 rounded hover:bg-white hover:text-sky-700'} to={"/get-started"}>Get Started with NOVA</NavLink></li>
                         </ul>
                     }
                 </div>
