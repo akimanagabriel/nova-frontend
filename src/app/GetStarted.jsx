@@ -34,7 +34,7 @@ function GetStarted() {
                     </div>
 
                     <div className='flex flex-col'>
-                        <button className='bg-indigo-700 hover:bg-indigo-800 py-2 rounded-full text-white font-[500] w-1/2'>Get Started<i className='fa fa-angle-double-right pl-3' /></button>
+                        <button className='bg-indigo-700 hover:bg-indigo-800 py-2 rounded-full text-white font-[500] w-100'>Get Started<i className='fa fa-angle-double-right pl-3' /></button>
                     </div>
 
                     <div className='flex items-center justify-center px-5'>
@@ -44,7 +44,7 @@ function GetStarted() {
                     </div>
 
                     <div className='flex flex-col'>
-                        <button className='bg-red-700 hover:bg-red-800 py-2 rounded-lg text-white font-[500] w-1/2'>
+                        <button className='bg-red-700 hover:bg-red-800 py-2 rounded-lg text-white font-[500] w-100'>
                             <i className='fa fa-google pr-3' />
                             Continue with gmail
                         </button>
