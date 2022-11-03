@@ -3,26 +3,26 @@ export const menuList = [
         id : 1,
         name: 'Home',
         url: '/',
-        logo: '',
+        logo: 'fa fa-home',
     }, {
         id: 2,
         name: 'Services',
         url: '/services',
-        logo: ''
+        logo: 'fa fa-shopping-basket'
     }, {
         id: 3,
         name: 'Shop',
         url: '/shop',
-        logo: ''
+        logo: 'fa fa-cart-plus'
     }, {
         id: 4,
         name: 'Training',
         url: '/training',
-        logo: ''
+        logo: 'fa fa-book'
     }, {
         id: 5,
         name: 'Contact',
         url: '/contact',
-        logo: ''
+        logo: 'fa fa-phone'
     }
 ]
