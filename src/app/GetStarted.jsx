@@ -3,7 +3,7 @@ import React from 'react'
 function GetStarted() {
     return (
         <>
-            <div className='flex flex-col md:flex-row py-5 px-5 space-x-9'>
+            <div className='flex flex-col md:flex-row py-5 px-5 md:space-x-9'>
                 <div className='bg-gray-200 py-8 px-5 rounded-lg w-100 md:w-5/12'>
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-[900] text-slate-900">Get started with NOVA company limited</h1>
                     <p className='text-xl'>
