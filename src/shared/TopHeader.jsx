@@ -6,20 +6,23 @@ function TopHeader() {
 
     const [visible, setVisible] = useState(false)
 
-    const handleMenus = ()=>{
+    const handleMenus = () => {
         setVisible(!visible)
     }
 
     return (
         <>
-            <div className='flex flex-col md:flex-row py-1 justify-between items-center px-5'>
-                <p className='block'> <strong>Email: </strong>
-                    <a href='mailto:novaservicesltd@gmail.com' className='hover:text-orange-700'>novaservicesltd@gmail.com</a>
-                </p>
-                <p className='block'> <strong>Tel: </strong> <a href="tel:+250788552611" className='hover:text-orange-700'>+250 788 552 611</a> / <a className='hover:text-orange-700' href="tel:+250785122486">+250 785 122 486</a></p>
-                <div>
-                    <button className='bg-sky-800 px-6 py-2 rounded-full text-white hidden md:block'>Get Started</button>
-                </div>
+            <div className='flex  py-1 justify-between items-center px-5'>
+                    <div>
+                        <p className='block'> <strong>Email: </strong>
+                            <a href='mailto:novaservicesltd@gmail.com' className='hover:text-orange-700'>novaservicesltd@gmail.com</a>
+                        </p>
+                        <p className='block'> <strong>Tel: </strong> <a href="tel:+250788552611" className='hover:text-orange-700'>+250 788 552 611</a> / <a className='hover:text-orange-700' href="tel:+250785122486">+250 785 122 486</a></p>
+
+                    </div>
+                    <div className='hidden sm:block'>
+                        <button className='bg-sky-800 px-6 py-2 rounded-full text-white '>Get Started</button>
+                    </div>
             </div>
 
             {/* Main header */}
@@ -31,13 +34,13 @@ function TopHeader() {
                     </div>
 
                     <div className='md:hidden'>
-                        <button className='text-white' onClick={handleMenus}><i className={visible?'fa fa-times' : 'fa fa-bars'}/></button>
+                        <button className='text-white' onClick={handleMenus}><i className={visible ? 'fa fa-times' : 'fa fa-bars'} /></button>
                     </div>
 
                 </div>
 
                 <div>
-                    {visible && 
+                    {visible &&
                         <ul className="flex flex-col md:flex-row  md:space-x-5 py-2 text-sky-100">
                             {menuList.map((menu) => {
                                 return (<li key={menu.id.toString()}><NavLink className={'hover:font-bold hover:underline'} to={menu.url}>{menu.name}</NavLink></li>)

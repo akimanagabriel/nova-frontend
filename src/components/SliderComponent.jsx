@@ -35,7 +35,10 @@ function SliderComponent({ images }) {
                                     <div className='pb-10'>
                                         <h1 className='text-xl md:text-2xl text-slate-800 font-bold'>{image.title}</h1>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio saepe fugit repellat officia corrupti eligendi aspernatur, deserunt nulla iusto </p>
+                                        <button className='py-3 px-5 py-2 border border-sky-700 mt-4 rounded-full hover:bg-sky-700 hover:text-white'>Place Order</button>
                                     </div>
+
+
                                 </div>
                             </SwiperSlide>
                         </div>
