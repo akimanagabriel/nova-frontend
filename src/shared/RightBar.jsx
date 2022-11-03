@@ -17,6 +17,6 @@ function RightBar() {
       </ul>
     </div>
   )
-}
+} 
 
 export default RightBar

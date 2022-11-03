@@ -7,7 +7,7 @@ function Footer() {
         <>
             <div className='bg-slate-800'>
                 <div className='px-5 py-12'>
-                    <div className='flex justify-around gap-6'>
+                    <div className='flex flex-col md:flex-row md:gap-12 justify-around gap-6'>
                         <Link to={'/'} className='text-slate-100 font-[900] text-3xl'>NOVA</Link>
 
                         {/* contact us */}
