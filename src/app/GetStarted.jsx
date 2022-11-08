@@ -43,11 +43,27 @@ function GetStarted() {
                         <div className='w-[100%] border'></div>
                     </div>
 
-                    <div className='flex flex-col'>
-                        <button className='bg-red-700 hover:bg-red-800 py-2 rounded-lg text-white font-[500] w-100'>
+                    <div className='flex items-center justify-start px-5'>
+                        <span>Continue with</span>
+                    </div>
+
+                    <div className='flex flex-row gap-3'>
+
+                        <button className='bg-red-700 hover:bg-red-800 py-2 rounded-lg text-white font-[500] w-100 px-5'>
                             <i className='fa fa-google pr-3' />
-                            Continue with gmail
+                            gmail
                         </button>
+
+                        <button className='bg-indigo-700 hover:bg-indigo-800 py-2 rounded-lg text-white font-[500] w-100 px-5'>
+                            <i className='fa fa-facebook pr-3' />
+                            facebook
+                        </button>
+
+                        <button className='bg-sky-700 hover:bg-sky-800 py-2 rounded-lg text-white font-[500] w-100 px-5'>
+                            <i className='fa fa-twitter pr-3' />
+                            twitter
+                        </button>
+
                     </div>
 
                 </div>
