@@ -88,10 +88,11 @@ function ShopWrapper() {
                     {
                         products.map((product, index) => (
                             <div key={index} className='mb-5'>
-                                <div className='border shadow flex flex-row md:flex-col gap-3'>
-                                    <img src={product.image} alt={product.title} className='max-h-[180px] w-100' />
+                                <div className='border shadow flex flex-col gap-3'>
+                                    <img src={product.image} alt={product.title} className='max-h-sm md:max-h-xs w-100' />
                                     <div className='px-3 pb-3'>
-                                        <h1>{product.title}</h1>
+
+                                        <h1 className='font-[900]'>{product.title}</h1>
                                         <p>{product.description}</p>
                                         <p>
                                             <button className='px-4 py-2 bg-orange-500 text-white font-bold mt-2 rounded hover:bg-orange-600'>
