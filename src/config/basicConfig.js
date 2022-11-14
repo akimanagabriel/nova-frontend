@@ -1,5 +1,5 @@
 const api = {
-    offlineUrl: "http://localhost:5000",
+    offlineUrl: "https://backend-nova.herokuapp.com/",
     testingUrl: "",
     productionUrl: ""
 }
