@@ -29,7 +29,7 @@ function GetStarted() {
 
     axios
       .post(api.offlineUrl + "/api/users", user)
-      .then((res) => console.log("result"))
+      .then((res) => console.log("data saved successfully"))
       .catch((err) => setError(err.response.data.error));
   };
 

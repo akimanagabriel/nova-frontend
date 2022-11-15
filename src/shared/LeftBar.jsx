@@ -24,19 +24,21 @@ function LeftBar() {
 
 
     return (
-        <div className='w-full md:w-5/12 hidden lg:block'>
-            <div className=' p-3'>
-                <h1 className='md:text-2xl font-bold text-sky-900'>Available Goods</h1>
+      <div className="w-full md:w-4/12 hidden lg:block">
+        <div className=" p-3">
+          <h1 className="md:text-2xl font-bold text-sky-900">
+            Available Goods
+          </h1>
 
-                {/* list of items */}
-                <div>
-                    {loading && <LoadingComponent />}
-                    {!loading && products.map(p => <ProductsCard key={p._id} product={p} />)}
-
-                </div>
-            </div>
+          {/* list of items */}
+          <div>
+            {loading && <LoadingComponent />}
+            {!loading &&
+              products.map((p) => <ProductsCard key={p._id} product={p} />)}
+          </div>
         </div>
-    )
+      </div>
+    );
 }
 
 export default LeftBar
