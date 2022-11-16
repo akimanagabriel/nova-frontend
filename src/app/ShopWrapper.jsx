@@ -7,7 +7,7 @@ import LoadingComponent from "./../components/LoadingComponent";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 import { Link } from "react-router-dom";
 
-function ShopWrapper() {
+function ShopWrapper(props) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -31,7 +31,7 @@ function ShopWrapper() {
           <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {products.map((product, index) => (
               <div key={index} className="mb-5">
-                <Link to={`/product/${product._id}/view`}>
+                <Link to={`/product/view/${product._id}`}>
                   <div className="border shadow flex flex-col gap-3 hover:border-gray-200 hover:shadow-xl hover:bg-gray-50 cursor-default">
                     <img
                       src={product.image[0] || noImage}
@@ -53,20 +53,22 @@ function ShopWrapper() {
 
                       {/* details of product */}
                       <ReactReadMoreReadLess
-                        charLimit={20}
-                        readMoreText={"▼"}
-                        readLessText={"▲"}
+                        charLimit={30}
+                        readMoreText={""}
+                        readLessText={""}
                         readMoreClassName="text-blue-900 font-bold"
                         readLessClassName="text-blue-900 font-bold"
                       >
                         {product.description || "Un described product"}
                       </ReactReadMoreReadLess>
-                      <p>
-                        <button className="px-4 py-2 bg-blue-900 text-white font-bold mt-2 rounded hover:bg-orange-600">
-                          <i className="fa fa-cart-plus mr-2" />
-                          Add to cart
-                        </button>
-                      </p>
+                      {props.button && (
+                        <p>
+                          <button className="px-4 py-2 bg-orange-700 text-white font-bold mt-2 rounded hover:bg-orange-600">
+                            <i className="fa fa-cart-plus mr-2" />
+                            Add to cart
+                          </button>
+                        </p>
+                      )}
                     </div>
                   </div>
                 </Link>

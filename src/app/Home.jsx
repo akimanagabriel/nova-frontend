@@ -8,7 +8,7 @@ function Home() {
       <div className="py-3 px-0 overflow-hidden ">
         <SliderComponent />
       </div>
-      <ShopWrapper />
+      <ShopWrapper button="true" />
     </div>
   );
 }
