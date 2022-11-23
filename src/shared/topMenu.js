@@ -24,5 +24,10 @@ export const menuList = [
         name: 'Contact',
         url: '/contact',
         logo: 'fa fa-phone'
+    }, {
+        id: 6,
+        name: 'About-Us',
+        url: '/about',
+        logo: '	fa fa-ellipsis-v'
     }
 ]

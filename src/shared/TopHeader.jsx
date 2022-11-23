@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { menuList } from "./topMenu";
 import logo from "../images/NOVA-LOGO.JPG";
+import { useSelector } from "react-redux";
+import GoogleLogoutComponent from "./loginWithGoogle/GoogleLogoutComponent";
 
 function TopHeader() {
   const [visible, setVisible] = useState(true);
@@ -9,6 +11,8 @@ function TopHeader() {
   const handleMenus = () => {
     setVisible(!visible);
   };
+
+  const { isLoggedIn } = useSelector((state) => state.auth);
 
   return (
     <>
@@ -37,12 +41,16 @@ function TopHeader() {
           </p>
         </div>
         <div className="hidden sm:block">
-          <Link
-            className="bg-blue-900 px-6 py-2 rounded-full text-white"
-            to={"/get-started"}
-          >
-            Get Started
-          </Link>
+          {!isLoggedIn && (
+            <Link
+              className="bg-blue-900 px-6 py-2 rounded-full text-white"
+              to={"/get-started"}
+            >
+              Get Started
+            </Link>
+          )}
+
+          {isLoggedIn && <GoogleLogoutComponent />}
         </div>
       </div>
 

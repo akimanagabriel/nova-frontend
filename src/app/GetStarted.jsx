@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import api from "./../config/basicConfig";
+import GoogleLoginComponent from "../shared/loginWithGoogle/GoogleLoginComponent";
 
 function GetStarted() {
   const [fullName, setFullName] = useState("");
@@ -29,9 +30,11 @@ function GetStarted() {
 
     axios
       .post(api.offlineUrl + "/api/users", user)
-      .then((res) => console.log("data saved successfully"))
+      .then((res) => console.log("data saved successfully", res))
       .catch((err) => setError(err.response.data.error));
   };
+
+  // check if is logged in
 
   return (
     <>
@@ -150,21 +153,8 @@ function GetStarted() {
             <span>Continue with</span>
           </div>
 
-          <div className="flex flex-row gap-3">
-            <button className="bg-red-700 hover:bg-red-800 py-2 rounded-lg text-white font-[500] w-100 px-5">
-              <i className="fa fa-google pr-3" />
-              gmail
-            </button>
-
-            <button className="bg-indigo-700 hover:bg-indigo-800 py-2 rounded-lg text-white font-[500] w-100 px-5">
-              <i className="fa fa-facebook pr-3" />
-              facebook
-            </button>
-
-            <button className="bg-sky-700 hover:bg-sky-800 py-2 rounded-lg text-white font-[500] w-100 px-5">
-              <i className="fa fa-twitter pr-3" />
-              twitter
-            </button>
+          <div className="flex flex-row gap-3 w-100">
+            <GoogleLoginComponent />
           </div>
         </div>
       </div>
