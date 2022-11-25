@@ -4,6 +4,7 @@ import { menuList } from "./topMenu";
 import logo from "../images/NOVA-LOGO.JPG";
 import { useSelector } from "react-redux";
 import GoogleLogoutComponent from "./loginWithGoogle/GoogleLogoutComponent";
+import GoogleLoginComponent from "./loginWithGoogle/GoogleLoginComponent";
 
 function TopHeader() {
   const [visible, setVisible] = useState(true);
@@ -42,12 +43,17 @@ function TopHeader() {
         </div>
         <div className="hidden sm:block">
           {!isLoggedIn && (
-            <Link
-              className="bg-blue-900 px-6 py-2 rounded-full text-white"
-              to={"/get-started"}
-            >
-              Get Started
-            </Link>
+            <>
+              <div className="flex gap-3 items-center justify-end">
+                <Link
+                  className="bg-blue-900 px-6 py-2 rounded-full text-white"
+                  to={"/get-started"}
+                >
+                  Get Started
+                </Link>
+                <GoogleLoginComponent />
+              </div>
+            </>
           )}
 
           {isLoggedIn && <GoogleLogoutComponent />}

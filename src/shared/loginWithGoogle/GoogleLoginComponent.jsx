@@ -16,7 +16,7 @@ function GoogleLoginComponent() {
     const novaUser = {
       fullName: googleUser.name,
       email: googleUser.email,
-      imgage: googleUser.imageUrl,
+      image: googleUser.imageUrl,
     };
     // store state into redux store
     dispatch(login(novaUser));
@@ -34,7 +34,6 @@ function GoogleLoginComponent() {
       onSuccess={handleSuccess}
       onFailure={handleFailure}
       isSignedIn={true}
-      theme="dark"
     />
   );
 }

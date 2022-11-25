@@ -3,5 +3,9 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .active{
-    @apply underline font-bold
+    @apply font-[900]
+}
+
+.dashboard.active{
+    @apply text-indigo-800 bg-indigo-200
 }

@@ -4,13 +4,13 @@ import api from "./../../config/basicConfig";
 import authSlice from "./../../redux/slices/authSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+const { logout } = authSlice.actions;
 
 function GoogleLogoutComponent() {
   const dispatch = useDispatch();
   const redirect = useNavigate();
 
   const handleLogout = (res) => {
-    const { logout } = authSlice.actions;
     dispatch(logout());
     redirect("/");
   };
@@ -22,8 +22,7 @@ function GoogleLogoutComponent() {
           buttonText="Logout"
           icon="false"
           clientId={api.googleClientId}
-          onLogoutSuccess={handleLogout}
-          theme="dark"
+          onLogoutSuccess={() => handleLogout()}
         />
       </div>
     </div>
