@@ -32,7 +32,7 @@ function ShopWrapper(props) {
             {products.map((product, index) => (
               <div key={index} className="mb-5">
                 <Link to={`/product/view/${product._id}`}>
-                  <div className="border shadow flex flex-col gap-3 hover:border-gray-200 hover:shadow-xl hover:bg-gray-50 cursor-default">
+                  <div className="border shadow flex flex-col gap-3 hover:border-gray-200 hover:shadow-xl bg-white hover:bg-gray-50 cursor-default">
                     <img
                       src={product.image[0] || noImage}
                       alt={product.name}

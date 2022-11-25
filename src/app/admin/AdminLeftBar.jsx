@@ -41,6 +41,17 @@ function AdminLeftBar() {
           {/* separator */}
           <div className="border border-gray-400 h-0"></div>
 
+          {/* dashboard button */}
+          <div className="mt-3">
+            <Link
+              to="/admin/dashbord"
+              className="flex justify-center items-center font-bold gap-3 shadow-sm items-center bg-indigo-800 p-2 rounded text-indigo-800 bg-indigo-200"
+            >
+              <i className="fa fa-dashboard" />
+              Dashboard
+            </Link>
+          </div>
+
           {/* dashboard links */}
           <div className="my-3">
             <ul className="grid grid-cols-3 md:grid-cols-2">
@@ -63,7 +74,7 @@ function AdminLeftBar() {
           </div>
 
           {/* logout */}
-          <div className="py-8 flex justify-end">
+          <div className="py-8 flex justify-start">
             <GoogleLogoutComponent />
           </div>
         </div>

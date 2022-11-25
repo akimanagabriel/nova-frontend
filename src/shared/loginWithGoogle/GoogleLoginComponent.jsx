@@ -20,7 +20,7 @@ function GoogleLoginComponent() {
     };
     // store state into redux store
     dispatch(login(novaUser));
-    redirect("/dashbord");
+    redirect("/admin/dashbord");
   };
 
   const handleFailure = (res) => {
