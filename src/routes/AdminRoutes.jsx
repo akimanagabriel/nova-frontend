@@ -7,6 +7,9 @@ import AdminHeader from "./../app/admin/AdminHeader";
 import ErrorPage from "./../shared/ErrorPage";
 import SingleProduct from "./../components/SingleProduct";
 import AdminService from "../app/admin/AdminService";
+import NewProductForm from "../app/admin/NewProductForm";
+import Employees from "../app/Employees";
+import SingleEmployee from "../components/SingleEmployee";
 
 function AdminRoutes() {
   const { isLoggedIn } = useSelector((state) => state.auth);
@@ -28,7 +31,10 @@ function AdminRoutes() {
               <Route path="/m/orders" element={"orders"} />
               <Route path="/m/services" element={<AdminService />} />
               <Route path="/m/trainning" element={"trainning"} />
-              <Route path="/m/employment" element={"employments"} />
+
+              <Route path="/m/employment" element={<Employees />} />
+              <Route path="/employment/view/:id" element={<SingleEmployee />} />
+
               <Route path="/m/feed" element={"feeds"} />
               <Route path="/m/comments" element={"comments"} />
 
@@ -37,6 +43,7 @@ function AdminRoutes() {
                 path="/product/view/:productId"
                 element={<SingleProduct />}
               />
+              <Route path="/create-product" element={<NewProductForm />} />
             </Routes>
           </div>
         </div>
