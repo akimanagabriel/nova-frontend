@@ -21,15 +21,13 @@ function App() {
   return (
     <div className="text-slate-700">
       {
-        !isLoggedIn && (
+        !isLoggedIn ? (
           <>
             <TopHeader />
             <LandingPage />
             <Footer />
           </>
-        )}
-
-      {isLoggedIn && (
+        ) : (
         <>
           <AdminRoutes />
         </>

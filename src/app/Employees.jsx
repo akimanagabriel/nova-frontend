@@ -4,6 +4,7 @@ import axios from "axios";
 import api from "./../config/basicConfig";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import moment from "moment";
 
 function Employees() {
   const [error, setError] = useState("");
@@ -65,7 +66,7 @@ function Employees() {
                 <th className="border">Email</th>
                 <th className="border">Telephone</th>
                 <th className="border" colSpan={2}>
-                  Username
+                  Miscellaneous
                 </th>
               </tr>
             </thead>
@@ -76,7 +77,7 @@ function Employees() {
                   <td className="border">{e.userId.fullName}</td>
                   <td className="border">{e.userId.email}</td>
                   <td className="border">{e.userId.telephone}</td>
-                  <td className="border">{e.userId.username}</td>
+                  <td className="border">{moment(e.createdAt).fromNow()}</td>
                   <td className="border flex justify-around">
                     <button
                       onClick={() => handleDelete(e._id)}

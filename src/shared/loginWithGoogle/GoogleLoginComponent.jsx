@@ -19,12 +19,26 @@ function GoogleLoginComponent() {
       image: googleUser.imageUrl,
     };
     // store state into redux store
+    saveUser(novaUser);
     dispatch(login(novaUser));
     redirect("/admin/dashbord");
   };
 
   const handleFailure = (res) => {
     console.log("Ooops error occured", res);
+  };
+
+  const saveUser = (user) => {
+    fetch(api.offlineUrl + "/api/users", {
+      method: "POST",
+      body: JSON.stringify(user),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
   };
 
   return (

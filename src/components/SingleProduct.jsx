@@ -6,13 +6,14 @@ import axios from "axios";
 import LoadingComponent from "./LoadingComponent";
 import noImage from "../images/no-image.png";
 import ShopWrapper from "../app/ShopWrapper";
-// import userAuthentication from "../shared/Authentication";
+import { useSelector } from "react-redux";
 
 function SingleProduct() {
   const { productId } = useParams();
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(true);
-  //   const [user, setUser] = useState();
+
+  const { isLoggedIn } = useSelector((state) => state.auth);
 
   useEffect(() => {
     axios
@@ -26,20 +27,10 @@ function SingleProduct() {
       });
   }, [productId]);
 
-  //   get logged user
-
-  //   useEffect(() => {
-  //     userAuthentication.login("peter", "shardaq").then((data) => {
-  //       setUser(data);
-  //     });
-  //   }, []);
-
   const handleImageView = (event) => {
     const mainImage = document.querySelector("#mainImage");
     mainImage.src = event.target.src;
   };
-
-  //   console.log(user);
 
   return (
     <>
@@ -74,18 +65,22 @@ function SingleProduct() {
             <p className="flex gap-2 flex-wrap">
               <button className="px-4 py-2 bg-orange-700 text-white mt-2 rounded hover:bg-orange-600">
                 <i className="fa fa-cart-plus mr-2" />
-                Add to cart
+                ORDER
               </button>
 
-              <button className="px-4 py-2 bg-blue-700 text-white mt-2 rounded hover:bg-blue-600">
-                <i className="fa fa-edit mr-2" />
-                Edit Product
-              </button>
+              {isLoggedIn && (
+                <>
+                  <button className="px-4 py-2 bg-blue-700 text-white mt-2 rounded hover:bg-blue-600">
+                    <i className="fa fa-edit mr-2" />
+                    Edit Product
+                  </button>
 
-              <button className="px-4 py-2 bg-red-700 text-white mt-2 rounded hover:bg-red-600">
-                <i className="fa fa-trash mr-2" />
-                Remove from stock
-              </button>
+                  <button className="px-4 py-2 bg-red-700 text-white mt-2 rounded hover:bg-red-600">
+                    <i className="fa fa-trash mr-2" />
+                    Remove from stock
+                  </button>
+                </>
+              )}
             </p>
           </div>
         </div>

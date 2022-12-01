@@ -64,8 +64,8 @@ function ShopWrapper(props) {
                       {props.button && (
                         <p>
                           <button className="px-4 py-2 bg-orange-700 text-white font-bold mt-2 rounded hover:bg-orange-600">
-                            <i className="fa fa-cart-plus mr-2" />
-                            Add to cart
+                            <i className="fa fa-eye mr-2" />
+                            More details
                           </button>
                         </p>
                       )}
